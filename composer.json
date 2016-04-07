@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Quan\\EmaySms\\": "src/Emay/"
+            "Quan\\Emay\\": "src/Emay/"
         }
     }
 }
