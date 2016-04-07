@@ -36,7 +36,7 @@ class EmayServiceProvider extends ServiceProvider
     {
         if (function_exists('config_path')) {
             $this->publishes([
-                __DIR__ . '/config.php' => config_path('emay.php'),
+                __DIR__.'/../config.php' => config_path('emay.php'),
             ], 'config');
         }
     }
@@ -49,7 +49,7 @@ class EmayServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config.php', 'emay'
+            __DIR__.'/../config.php', 'emay', 'emay'
         );
 
         $this->app->singleton(['Quan\\Emay\\Emay' => 'emay.emay'], function($app){
