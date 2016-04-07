@@ -3,6 +3,8 @@
     "description": "Emay SMS Composer package for LARAVEL",
     "license": "MIT",
     "keywords": ["Emay SMS"],
+    "homepage": "https://github.com/endroid/QrCode",
+    "type": "library",
     "version": "1.0.0",
     "authors": [
         {
