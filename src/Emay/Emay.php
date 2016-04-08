@@ -40,9 +40,10 @@ class Emay {
 	protected $client = null;
 
 	public function __construct(){
-		$this->serialNumber = config('emay_serial_number');
-		$this->password = config('emay_password');
-		$this->sessionKey = config('emay_session_key');
+		
+		$this->serialNumber = config('emay.emay_serial_number');
+		$this->password = config('emay.emay_password');
+		$this->sessionKey = config('emay.emay_session_key');
 		
 		$this->client = new Client(
 				$this->gwUrl,

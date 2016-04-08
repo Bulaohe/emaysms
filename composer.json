@@ -3,7 +3,7 @@
     "description": "Emay SMS Composer package for LARAVEL",
     "license": "MIT",
     "keywords": ["Emay SMS"],
-    "homepage": "https://github.com/endroid/QrCode",
+    "homepage": "https://packagist.org/packages/quan/emaysms",
     "type": "library",
     "authors": [
         {
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "noiselabs/nusoap-bundle": "0.2.1",
+        "fergusean/nusoap": "0.9.5",
         
     },
     "autoload": {

@@ -1,7 +1,7 @@
 <?php namespace Quan\Emay;
 
-use Illuminate\Support\ServiceProvider;
-class EmayServiceProvider extends ServiceProvider
+use Illuminate\Support\ServiceProvider as EmayServiceProvider;
+class ServiceProvider extends EmayServiceProvider
 {
     /**
      * 延迟加载

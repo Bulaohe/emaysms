@@ -73,7 +73,7 @@ class Client{
 	 *
 	 *
 	 */
-	public function __construct($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
+	function Client($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
 	{
 		$this->url = $url;
 		$this->serialNumber = $serialNumber;
@@ -234,7 +234,7 @@ class Client{
 	 	*/
 	 	foreach($mobiles as $mobile)
 	 	{
-	 		array_push($params,new soapval("arg3",false,$mobile));
+	 		array_push($params,new \soapval("arg3",false,$mobile));
 	 	}
 	 	$result = $this->soap->call("sendSMS",$params,$this->namespace);
 	 	return $result;
