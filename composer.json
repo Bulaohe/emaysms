@@ -12,7 +12,9 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "noiselabs/nusoap-bundle": "0.2.1",
+        
     },
     "autoload": {
         "psr-4": {

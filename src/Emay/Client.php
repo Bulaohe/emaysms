@@ -73,7 +73,7 @@ class Client{
 	 *
 	 *
 	 */
-	function Client($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
+	public function __construct($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
 	{
 		$this->url = $url;
 		$this->serialNumber = $serialNumber;
@@ -86,7 +86,7 @@ class Client{
 		/**
 		 * 初始化 webservice 客户端
 		 */
-		$this->soap = new \Quan\Emay\Lib\nusoap_client($url,false,$proxyhost,$proxyport,$proxyusername,$proxypassword,$timeout,$response_timeout);
+		$this->soap = new \nusoap_client($url,false,$proxyhost,$proxyport,$proxyusername,$proxypassword,$timeout,$response_timeout);
 		$this->soap->soap_defencoding = $this->outgoingEncoding;
 		$this->soap->decode_utf8 = false;
 
@@ -234,7 +234,7 @@ class Client{
 	 	*/
 	 	foreach($mobiles as $mobile)
 	 	{
-	 		array_push($params,new \Quan\Emay\Lib\soapval("arg3",false,$mobile));
+	 		array_push($params,new soapval("arg3",false,$mobile));
 	 	}
 	 	$result = $this->soap->call("sendSMS",$params,$this->namespace);
 	 	return $result;
@@ -271,7 +271,7 @@ class Client{
 	 	*/
 	 	foreach($mobiles as $mobile)
 	 	{
-	 		array_push($params,new \Quan\Emay\Lib\soapval("arg3",false,$mobile));
+	 		array_push($params,new \soapval("arg3",false,$mobile));
 	 	}
 	 	$result = $this->soap->call("sendVoice",$params,$this->namespace);
 	 	return $result;
@@ -490,7 +490,7 @@ class Client{
 	   	*/
 	   	foreach($forwardMobiles as $mobile)
 	   	{
-	   		array_push($params,new \Quan\Emay\Lib\soapval("arg2",false,$mobile));
+	   		array_push($params,new \soapval("arg2",false,$mobile));
 	   	}
 
 	   	$result = $this->soap->call("setMOForwardEx",$params,$this->namespace);
