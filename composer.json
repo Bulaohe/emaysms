@@ -5,6 +5,7 @@
     "keywords": ["Emay SMS"],
     "homepage": "https://packagist.org/packages/quan/emaysms",
     "type": "library",
+    "minimum-stability" : "dev",
     "authors": [
         {
             "name": "Simon Quan",

@@ -73,7 +73,7 @@ class Client{
 	 *
 	 *
 	 */
-	function Client($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
+	public function __construct($url,$serialNumber,$password,$sessionKey='',$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30)
 	{
 		$this->url = $url;
 		$this->serialNumber = $serialNumber;
